@@ -3,7 +3,7 @@ var floatAge,floatDay,intWeeks,intFortnights;
      floatAge = parseFloat (prompt("Enter Current Age"));
      floatDay = parseFloat(floatAge*365.25);
      floatMonth = parseFloat(floatAge*12);
-     intWeeks = parseFloat(floatDay/7);
+     intWeeks = parseFloat(floatDay/7).toFixed(2);
      intFortnights = parseFloat(floatDay/14).toFixed(2);
      alert("Age in days = " + floatDay);
      alert("Age in months = " + floatMonth);
