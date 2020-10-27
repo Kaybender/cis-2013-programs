@@ -12,17 +12,17 @@ var calculateIncome = function ()
     {
     	if (floatAnnualIncome <= 30000)
     	{
-    		floatTaxRate = 0.025;
+    		floatTaxRate = 2.5;
     	}
     	else
     	{
     		if(floatAnnualIncome >= 30000 && floatAnnualIncome <= 75000)
     		{
-    			floatTaxRate = 0.05;
+    			floatTaxRate = 5;
     		}
     		else
     		{
-    			floatTaxRate = 0.20;
+    			floatTaxRate = 20;
             }
         }
     }    
@@ -30,17 +30,17 @@ var calculateIncome = function ()
     {
     	if (floatAnnualIncome <= 30000)
         {
-    		floatTaxRate = 0.05;
+    		floatTaxRate = 5;
         }
         else
         {
             if (floatAnnualIncome >= 30000 && floatAnnualIncome <= 75000)
             {
-                floatTaxRate = 0.10;
+                floatTaxRate = 10;
             }
             else
             {
-                floatTaxRate = 0.20;
+                floatTaxRate = 20;
             }
         }    
 	}
@@ -52,7 +52,7 @@ var calculateIncome = function ()
 
 
 	alert ("Your annual income tax this year is $" + floatAnnualTax  +"\nBased upon an annual income of $"+ floatAnnualIncome+
-	"\nAnd a tax rate of " +floatTaxRate* 100+ "% \nNote: Tax rate is based upon your age");
+	"\nAnd a tax rate of " +floatTaxRate+ "% \nNote: Tax rate is based upon your age");
 	
 };
 
