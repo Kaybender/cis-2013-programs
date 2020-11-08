@@ -34,7 +34,7 @@ var fixPrinter = function()
         {
             if(boolRecognised === true)
             {
-                (stringOutput = stringMessage2 + stringMessage + stringMessage4);
+                (stringOutput = stringMessage2 + stringMessage3 + stringMessage4);
             }
             else
             {
