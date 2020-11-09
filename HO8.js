@@ -9,6 +9,7 @@
 */
 
 var intMax, intMin, intRandom, intGuess, intCount, intPoints;
+do{
 intMin= parseInt(prompt("Choose the lower number in the range. It must be at least 0")); // prompt to have the person put in the number 
 while (isNaN(intMin)||intMin<0) // conditions that need to be checked to see if the number chosen is valid
     {
@@ -23,7 +24,9 @@ while (isNaN(intMin)||intMin<0) // conditions that need to be checked to see if 
 while (isNaN(intMax)||intMax < (intMin +2))
     {
         intMax = parseInt(prompt("Invalid entry. Please enter a number greater than " + (intMin + 2) + " as your maximum number"));           
-    }//while 
+    }//while
+    
+
 intGuess = parseInt(prompt("Please enter a number between "+(intMax)+ " and " +(intMin))); // Prompts user to enter a guess between min and max
 while (isNaN(intGuess)||intGuess<intMin||intGuess>intMax) // Conditions that make the entry invalid
     {
@@ -44,7 +47,7 @@ intRandom = parseInt(Math.floor(Math.random()*(intMax-intMin+1))+intMin);// math
  * is given based upon whether the guess is higher or lower. The loop exits when
  * the user chooses the correct number. Each time through the loop updates the loop counter.
  */
-intCount = 1; //counts the number of guesses the user makes 
+var intCount = 1;
 while (intGuess!=intRandom){ // while the player's guess is not equal to the random number 
    if (intGuess< intRandom){ // if the guess is smaller than the random number 
       intGuess = parseInt(prompt("Your guess of " +intGuess + " is too low. Guess again"));
@@ -53,15 +56,21 @@ while (intGuess!=intRandom){ // while the player's guess is not equal to the ran
 }
    } else{
       intGuess = parseInt(prompt("Your guess of "+ intGuess + " is too high. Guess again"));
-      while(isNaN(intGuess)||intGuess<intMin||intGuess>intMax)
+      while(isNaN(intGuess)||intGuess<intMin||intGuess>intMax) {
       intGuess = parseInt(prompt("Sorry, you need to choose a number between " + intMin + " and " + intMax));
    }
    } //while 
-intCount++; //counts the number of trys a user makes 
+intCount++; //counts the number of attempts a user makes
+}
 
-intPoints = 11- intCount; //gives user more points with less trys
+intPoints = 11- intCount; //gives user more points with less attempts, with a max of 10 points 
 
 
 // alerts final output guess and awards points to the user
 alert("Congratulations!! You guessed the correct number (" + intRandom +")\n" +
 		" and it took you " + intCount + " attempts!\n You get " + intPoints + " points!");
+      
+    intQuit= parseInt(prompt("Enter any number to quit, enter any letter to play again")); //prompts user to quit game 
+      
+}     
+while (isNaN(intQuit)); // end of do loop if intQuit is not a number
