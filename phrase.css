@@ -1,0 +1,42 @@
+body {
+    font-family: Lucida Console, Monaco, Monospace; /* this is ugly but I wanted to see what monospace looked like */
+    background-color: white;
+    margin: 10px auto;
+    width: 725px;
+    padding: 5px 20px;
+    border: 5px solid black;
+}
+h1 {
+	color: purple;
+	text-align: center;
+}
+
+p {
+	font-weight: bold;
+	text-align: center;
+}
+
+h4 {
+	text-align: center;
+}
+section {
+    padding: 0 2em 1em;
+}
+
+label {
+	float: left;
+    width: 10em;
+    text-align: right;
+    padding-bottom: 1em;
+}
+input {
+    margin-left: 1em;
+    margin-bottom: .5em;
+}
+fieldset {
+	text-align: center;
+}
+textarea {
+	resize: none;
+	font-size: 150%;
+}
